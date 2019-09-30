@@ -1,0 +1,32 @@
+*eselect-syntax.txt*	Eselect Syntax Plugin
+
+Authors:  Ciaran McCreesh <ciaranm at gentoo dot org>
+          Aaron Walker    <ka0ttic at gentoo dot org>
+          Tom Martin      <slarti  at gentoo dot org>
+          Elfyn McBratney <beu     at gentoo dot org>
+          Mike Kelly      <pioto   at gentoo dot org>
+
+==============================================================================
+1. Contents						      *eselect-syntax*
+
+    1. Contents						  |eselect-syntax|
+
+    2. Plugin Information			 |eselect-syntax-overview|
+
+    3. ChangeLog				|eselect-syntax-changelog|
+
+==============================================================================
+2. Plugin Information				     *eselect-syntax-overview*
+
+	The eselect-syntax package provides syntax hilighting and templates
+	for creating eselect modules.
+
+==============================================================================
+3. ChangeLog					    *eselect-syntax-changelog*
+
+	20070506 pioto
+	    * Package split from gentoo-syntax.
+	    * First release.
+
+==============================================================================
+vim:tw=78:ts=8:ft=help
