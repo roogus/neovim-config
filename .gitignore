@@ -1,6 +1,8 @@
 # Ignore all local plugin content, but track the directory.
 plugged/*
 !plugged/.gitkeep
+fonts/*
+!fonts/.gitkeep
 
 # Ignore all swap/undo/backup files, but track the directories.
 files/backup/*
