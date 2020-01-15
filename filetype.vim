@@ -1469,7 +1469,7 @@ au BufNewFile,BufRead catalog			setf catalog
 " Shell scripts (sh, ksh, bash, bash2, csh); Allow .profile_foo etc.
 " Gentoo ebuilds and Arch Linux PKGBUILDs are actually bash scripts
 " NOTE: Patterns ending in a star are further down, these have lower priority.
-au BufNewFile,BufRead .bashrc,bashrc,bash.bashrc,.bash[_-]profile,.bash[_-]logout,.bash[_-]aliases,bash-fc[-.],*.bash,*/{,.}bash[_-]completion{,.d,.sh}{,/*},*.ebuild,*.eclass,*.eclass,PKGBUILD call dist#ft#SetFileTypeSH("bash")
+au BufNewFile,BufRead .bashrc,bashrc,bash.bashrc,.bash[_-]profile,.bash[_-]logout,.bash[_-]aliases,bash-fc[-.],*.bash,*/{,.}bash[_-]completion{,.d,.sh}{,/*},*.ebuild,*.eclass,PKGBUILD call dist#ft#SetFileTypeSH("bash")
 au BufNewFile,BufRead .kshrc,*.ksh call dist#ft#SetFileTypeSH("ksh")
 au BufNewFile,BufRead */etc/profile,.profile,*.sh,*.env call dist#ft#SetFileTypeSH(getline(1))
 

@@ -90,7 +90,7 @@ Plug 'tyru/caw.vim'
 "      Language-Specific Plugins    "
 """""""""""""""""""""""""""""""""""""
 Plug 'mads-hartmann/bash-language-server', {
-   \ 'do': 'npm compile'
+   \ 'do': 'npm run compile'
    \ }
 
 " PHP
@@ -102,7 +102,7 @@ Plug 'felixfbecker/php-language-server', {
 
 " Java
 Plug 'eclipse/eclipse.jdt.ls', {
-   \ 'do': './mvnw clean verfiy'
+   \ 'do': './mvnw clean compile verfiy'
    \ }
 
 " Javascript
