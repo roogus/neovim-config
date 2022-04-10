@@ -9,20 +9,20 @@ set termguicolors
 " Set the colorscheme for vim.
 set background=dark
 
-"colorscheme gruvbox
+colorscheme gruvbox
 "colorscheme ir_black
 "colorscheme kalisi
 "colorscheme nord
-colorscheme onedark
+"colorscheme onedark
 "colorscheme carbonized-dark
 "colorscheme spacegray
 "colorscheme gruvbox8
 "colorscheme gruvbox8_hard
 "colorscheme gruvbox8_soft
 
-"let g:gruvbox_bold = 1
-"let g:gruvbox_italic = 1
-"let g:gruvbox_underline = 1
-"let g:gruvbox_undercurl = 1
-"let g:gruvbox_contrast_dark = 'soft'
-"let g:gruvbox_contrast_light = 'soft'
+let g:gruvbox_bold = 1
+let g:gruvbox_italic = 1
+let g:gruvbox_underline = 1
+let g:gruvbox_undercurl = 1
+let g:gruvbox_contrast_dark = 'soft'
+let g:gruvbox_contrast_light = 'soft'

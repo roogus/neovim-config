@@ -27,11 +27,11 @@ if has("gui_running")
       if g:dbg == 'true'
 	echom "[INFO] Using /usr/bin/python2.7"
       endif
-      let g:python_host_prog = '/usr/bin/python2.7'
+      let g:python_host_prog = '/usr/bin/python'
       if g:db == 'true'
 	echom "[INFO] Using /usr/bin/python3.6"
       endif
-      let g:python3_host_prog = '/usr/bin/python3.6'
+      let g:python3_host_prog = '/usr/bin/python3'
     elseif g:os == "Windows"
       if g:dbg == 'true'
 	echom "[INFO] Using C:\python2\python2"
@@ -51,14 +51,14 @@ endif
 " you're doing...
 " Use spaces not tabs, comment out for hard tabs
 set expandtab
-set softtabstop=2
+set softtabstop=4
 
 " For hard tabs, comment out 'set expandtab' and 'set softtabstop' above,
 " then uncomment the following line.
 "set tabstop=2
 
 " Set a default indent, but vim-sleuth should adjust it.
-set shiftwidth=2
+set shiftwidth=4
 
 " Terminal settings
 tnoremap <Leader><ESC> <C-\><C-n>

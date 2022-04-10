@@ -1,65 +1,53 @@
-" ALE Plugin Configuration 
-" https://github.com/w0rp/ale
-
-"================================
-"   Toggle the 'On' Switch
+" Enable ALE plugin
 let g:ale_enabled = 1
 
-"================================
-" Toggle vim-airline Integration TODO - var doesn't exist
-"let g:airline#extensions#ale#enabled
+" Enable airline integration
+let g:airline#extensions#ale#enabled = 1
 
-"================================
-"   ALE Linting Timing Opts
-let g:ale_lint_on_text_changed = 'always'
-let g:ale_lint_on_enter = 1
-let g:ale_lint_on_save = 1
-let g:ale_lint_on_filetype_changed = 1
-let g:ale_lint_delay = '200' " in milliseconds
-" run the following cmd to manually lint the current buffer
-" :ALELint
+" Turn on completion (moved to modules/ale.vim)
+"let g:ale_completion_enabled = 1
 
-"================================
-"   ALE Linting Msg Loc Opts
-" By updating loclist. (On by default)
-let g:ale_set_loclist = 1
-" By updating quickfix. (Off by default)
-let g:ale_set_quickfix = 0
-" By setting error highlights.
-let g:ale_set_highlights = 1
-" By creating signs in the sign column.
-let g:ale_set_signs = 1
-" By echoing messages based on your cursor.
-let g:ale_echo_cursor = 1
-" By showing balloons for your mouse cursor.
+" Use balloon_show() func to display Hover info
 let g:ale_set_balloons = 1
 
-"================================
-" ALE Available Linters
-let g:ale_linters = {
-        \ 'vim': ['vint'],
-        \ 'sh': ['langserver'],
-        \ 'csh': ['langserver'],
-        \ 'zsh': ['langserver'],
-        \ 'xml': ['xmllint'],
-        \ 'html': ['proselint'],
-        \ 'yaml': ['yamllint'],
-        \ 'javascript': ['eslint'],
-        \ 'json': ['jsonlint']
-\ }
+" Enable specific linters per filetype
+"\  'php': ['langserver'],
+let g:ale_linters={
+\ 'c': ['cquery'],
+\ 'cpp': ['cquery'],
+\ 'css': ['stylelint'],
+\ 'html': ['stylelint'],
+\ 'js': ['eslint'],
+\ 'json': ['prettier'],
+\ 'sass': ['stylelint'],
+\ 'scss': ['stylelint'],
+\ 'sql': ['sqlint'],
+\ 'sh': ['shell'],
+\ 'text': [],
+\ 'xml': ['xmllint'],
+\ 'yaml': ['prettier'],
+\}
 
-"================================
-" ESLint Specific Opts
-"let g:ale_javascript_eslint_executable = 'special-eslint'
-let g:ale_javascript_eslint_use_global = 1
+" Enable fixers
+let g:ale_fixers = {
+\ '*': ['remove_trailing_lines', 'trim_whitespace'],
+\ 'c': ['clang-format'],
+\ 'cpp': ['clang-format'],
+\ 'css': ['stylelint'],
+\ 'html': ['stylelint'],
+\ 'js': ['eslint'],
+\ 'json': ['prettier'],
+\ 'sass': ['stylelint'],
+\ 'scss': ['stylelint'],
+\ 'sql': ['sqlint'],
+\ 'xml': ['xmllint'],
+\ 'yaml': ['prettier'],
+\}
 
-"================================
-"   ALE Filetype Aliases
-let g:ale_linter_aliases = {
-        \ 'html': ['html', 'javascript', 'css'],
-        \ 'atj': ['atj', 'html'],
-        \ 'xml': ['xml', 'html']
-        \ }
+" Set this variable to 1 to fix files when you save them.
+let g:ale_fix_on_save = 1
 
-"================================
-"   TODO Auto-Fix, Auto-Complete, LanguageServers
+" PHP settings
+"let g:ale_php_php_executable = 'php'
+"let g:ale_php_langserver_use_global = 1
+"let g:ale_php_langserver_executable = ' /home/roogus/.config/nvim/plugged/php-language-server/bin/php-language-server.php'

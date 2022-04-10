@@ -8,13 +8,16 @@ else
   let g:LanguageClient_settingsPath = g:config_root . '/settings.json'
 endif
 
+  "\ 'php': ['php', '/home/roogus/.config/nvim/plugged/php-language-server/bin/php-language-server.php'],
+  "\ 'vue': ['vls'],
+  "\ 'javascript': ['node', '/home/roogus/.config/nvim/plugged/javascript-typescript-langserver/lib/language-server-stdio.js'],
+  "\ 'javascript.jsx': ['node', '/home/roogus/.config/nvim/plugged/javascript-typescript-langserver/lib/language-server-stdio.js'],
+  "\ 'cpp': ['cquery', '--logfile=/tmp/.private/roogus/cquery.log'],
+  "\ 'c': ['cquery', '--logfile=/tmp/.private/roogus/cquery.log'],
 let g:LanguageClient_serverCommands = {
-  \ 'php': ['php', '/home/roogus/.config/nvim/plugged/php-language-server/bin/php-language-server.php'],
-  \ 'cpp': ['cquery', '--logfile=/tmp/.private/roogus/cquery.log'],
-  \ 'c': ['cquery', '--logfile=/tmp/.private/roogus/cquery.log'],
-  \ 'vue': ['vls'],
-  \ 'javascript': ['node', '/home/roogus/.config/nvim/plugged/javascript-typescript-langserver/lib/language-server-stdio.js'],
-  \ 'javascript.jsx': ['node', '/home/roogus/.config/nvim/plugged/javascript-typescript-langserver/lib/language-server-stdio.js']
+  \ 'cpp': ['/usr/lib/llvm/9/bin/clangd', '-index-file=/path/to/index.yaml'],
+  \ 'c': ['/usr/lib/llvm/9/bin/clangd', '-background-index'],
+  \ 'sh': ['bash-language-server', 'start']
   \ }
 
 set completefunc=LanguageClient#complete

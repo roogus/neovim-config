@@ -1,5 +1,6 @@
 " Set the local leader.
-let maplocalleader = "|"
+"let maplocalleader = "|"
+let maplocalleader = " "
 
 " Clears the search.
 function! s:clear_search_results()
