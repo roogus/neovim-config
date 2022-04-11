@@ -45,7 +45,7 @@ syntax match anyId "[a-zA-Z_][a-zA-Z_0-9]*"
 
 " Inline code only
 syntax keyword fsmType fpc fc fcurs fbuf fblen ftargs fstack
-syntax keyword fsmKeyword fhold fgoto fcall fret fentry fnext fexec fbreak
+syntax keyword fsmKeyword fhold fgoto fcall fncall fret fnret fentry fnext fexec fbreak fnbreak
 
 syntax cluster rlItems contains=rlComment,rlLiteral,rlAugmentOps,rlOtherOps,rlKeywords,rlWrite,rlCodeCurly,rlCodeSemi,rlNumber,anyId,rlLabelColon,rlExprKeywords,rlBuiltIns
 
@@ -114,7 +114,7 @@ syntax region rlCodeSemi matchgroup=Type start="\<alphtype\>" start="\<getkey\>"
 syntax region rlWrite matchgroup=Type start="\<write\>" matchgroup=NONE end="[;)]" contained contains=rlWriteKeywords,rlWriteOptions
 
 syntax keyword rlWriteKeywords init data exec exports start error first_final contained
-syntax keyword rlWriteOptions noerror nofinal noentry noprefix noend nocs contained
+syntax keyword rlWriteOptions noerror nofinal noprefix noend nocs contained
 
 "
 " Sync at the start of machine specs.

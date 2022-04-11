@@ -182,13 +182,15 @@ syn keyword EbuildPythonKeyword python_optimize python_scriptinto python_doexe
 syn keyword EbuildPythonKeyword python_newexe python_doscript python_newscript
 syn keyword EbuildPythonKeyword python_moduleinto python_domodule python_doheader
 syn keyword EbuildPythonKeyword python_wrapper_setup python_is_python3 python_is_installed
-syn keyword EbuildPythonKeyword python_fix_shebang python_export_utf8_locale
+syn keyword EbuildPythonKeyword python_fix_shebang python_export_utf8_locale build_sphinx
+syn keyword EbuildPythonKeyword epytest eunittest
 
 " python-r1, python-single-r1 and python-any-r1
 syn keyword EbuildPythonKeyword python_gen_usedep python_gen_useflags python_gen_cond_dep
 syn keyword EbuildPythonKeyword python_gen_impl_dep python_copy_sources python_foreach_impl
 syn keyword EbuildPythonKeyword python_setup python_replicate_script python_gen_any_dep
 syn keyword EbuildPythonKeyword python-single-r1_pkg_setup python-any-r1_pkg_setup
+syn keyword EbuildPythonKeyword python_check_deps
 
 " deprecated functions
 syn keyword EbuildDeprecatedKeyword python_parallel_foreach_impl python_export_best
@@ -210,7 +212,12 @@ syn keyword EbuildDistutilsKeyword distutils-r1_python_prepare_all
 syn keyword EbuildDistutilsKeyword distutils-r1_python_compile
 syn keyword EbuildDistutilsKeyword distutils-r1_python_install
 syn keyword EbuildDistutilsKeyword distutils-r1_python_install_all
+syn keyword EbuildDistutilsKeyword sphinx_compile_all
 syn match EbuildDistutilsKeyword "esetup\.py"
+
+" distutils-r1 global helpers
+syn keyword EbuildDistutilsKeyword distutils_enable_tests
+syn keyword EbuildDistutilsKeyword distutils_enable_sphinx
 
 " distutils-r1 sub-phases
 syn keyword EbuildDistutilsFunction python_prepare python_prepare_all
@@ -251,7 +258,8 @@ syn keyword EbuildLinuxInfoKeyword set_arch_to_kernel set_arch_to_portage
 syn keyword EbuildUnpackerKeyword unpack_pdv unpack_makeself
 
 " user
-syn keyword EbuildUserKeyword egetent enewuser enewgroup
+syn keyword EbuildDeprecatedKeyword enewuser enewgroup
+syn keyword EbuildUserKeyword egetent
 
 " EXPORT_FUNCTIONS
 syn match EbuildExportFunctions /EXPORT_FUNCTIONS/ skipwhite nextgroup=EbuildExportFunctionsFunc,EbuildExportFunctionsFuncE
@@ -259,7 +267,7 @@ syn match EbuildExportFunctionsFunc contained /\S\+\(\s\|$\)\@=/ skipwhite nextg
 syn match EbuildExportFunctionsFuncE contained /\S\+\(\s\|$\)\@=\(\${\S\+}\|pkg_pretend\|pkg_nofetch\|pkg_setup\|src_unpack\|src_prepare\|src_configure\|src_compile\|src_test\|src_install\|pkg_preinst\|pkg_postinst\|pkg_prerm\|pkg_postrm\|pkg_config\|pkg_info\)\@<!/ skipwhite nextgroup=EbuildExportFunctionsFunc,EbuildExportFunctionsFuncE
 
 " Eclass documentation
-syn match EclassDocumentation /@\(AUTHOR\|BLURB\|BUGREPORTS\|CODE\|DEAD\|DESCRIPTION\|DEFAULT_UNSET\|ECLASS-VARIABLE\|ECLASS\|EXAMPLE\|FUNCTION\|INTERNAL\|MAINTAINER\|OUTPUT_VARIABLE\|PRE_INHERIT\|RETURN\|REQUIRED\|ROFF\|SUPPORTED_EAPIS\|USAGE\|USER_VARIABLE\|VARIABLE\|VCSURL\):/ contained
+syn match EclassDocumentation /@\(AUTHOR\|BLURB\|BUGREPORTS\|CODE\|DEAD\|DEPRECATED\|DESCRIPTION\|DEFAULT_UNSET\|ECLASS-VARIABLE\|ECLASS\|EXAMPLE\|FUNCTION\|INCLUDES_EPREFIX\|INTERNAL\|MAINTAINER\|OUTPUT_VARIABLE\|PRE_INHERIT\|PROVIDES\|RETURN\|REQUIRED\|SUBSECTION\|SUPPORTED_EAPIS\|USAGE\|USER_VARIABLE\|VARIABLE\|VCSURL\):/ contained
 " use shComment (sh.vim), make it compatible with other comment highlights
 syn match      shComment        "^\s*\zs#.*$"   contains=EclassDocumentation
 syn match      shComment        "\s\zs#.*$"     contains=EclassDocumentation

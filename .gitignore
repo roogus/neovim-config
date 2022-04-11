@@ -2,6 +2,9 @@
 plugged/*
 !plugged/.gitkeep
 
+plugin/*
+!plugin/.gitkeep
+
 # Ignore all swap/undo/backup files, but track the directories.
 files/backup/*
 !files/backup/.gitkeep
