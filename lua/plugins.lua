@@ -143,15 +143,7 @@ use { 'nvim-lualine/lualine.nvim',
     },
     config = get_config('lualine')
 }
-use { 'nvim-neo-tree/neo-tree.nvim',
-    branch = 'v2.x',
-    requires = {
-        'nvim-lua/plenary.nvim',
-        'kyazdani42/nvim-web-devicons',
-        'MunifTanjim/nui.nvim'
-    },
-    config = get_config('neotree')
-}
+use { 'luukvbaal/nnn.nvim', config = get_config('nnn') }
 use { 'windwp/nvim-autopairs', config = get_config('autopairs') }
 use { 'lukas-reineke/indent-blankline.nvim',
     requires = { 'nvim-treesitter/nvim-treesitter' },
