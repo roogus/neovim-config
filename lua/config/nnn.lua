@@ -1,6 +1,6 @@
 local cfg = {
 	explorer = {
-		cmd = "nnn",       -- command overrride (-F1 flag is implied, -a flag is invalid!)
+		cmd = "nnn -H",       -- command overrride (-F1 flag is implied, -a flag is invalid!)
 		width = 24,        -- width of the vertical split
 		side = "topleft",  -- or "botright", location of the explorer window
 		session = "",      -- or "global" / "local" / "shared"

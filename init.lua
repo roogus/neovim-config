@@ -42,4 +42,4 @@ if not errno then
 end
 
 -- Temporary test setup
-vim.cmd([[nnoremap \ :Neotree toggle<cr>]])
+vim.cmd([[nnoremap \ :NnnExplorer<cr>]])
